@@ -30,6 +30,8 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"katex": "^0.16.7"
+		"js-combinatorics": "^2.1.1",
+		"katex": "^0.16.7",
+		"seedrandom": "^3.0.5"
 	}
 }

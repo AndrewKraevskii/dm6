@@ -18,7 +18,7 @@
 
 <ol type="a">
   <li>
-    <h3><b>U</b> → <b>L</b>: Balls are <b>U</b>nlabeled, Boxes are <b>L</b>abeled.</h3>
+    <b>U</b> → <b>L</b>: Balls are <b>U</b>nlabeled, Boxes are <b>L</b>abeled.
     <ol type="1">
       <li><A1 /></li>
       <li><A2 /></li>

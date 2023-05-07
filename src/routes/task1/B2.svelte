@@ -24,6 +24,9 @@
   }
 
   function stirlingNumber(r: number, n: number): number {
+    if (r < 0 || n < 0) return 0;
+
+
     if (n > r) return -1;
 
     if (n == 0) return 0;

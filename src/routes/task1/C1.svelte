@@ -5,7 +5,7 @@
   let n = 7;
   let k = 10;
 
-  $: a = C.factorial(k) / C.factorial(k - n);
+  $: a = C.factorial(Math.max(k, 0)) / C.factorial(Math.max(k - n, 0));
 </script>
 
 <h4>≤ 1 ball per box—injective mapping.</h4>

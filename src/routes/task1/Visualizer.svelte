@@ -8,6 +8,13 @@
   export let n = 5;
   export let k = 5;
 
+  $: {
+    n = Math.floor(n);
+  }
+  $: {
+    k = Math.floor(k);
+  }
+
   $: if (n < 0) {
     n = 0;
   }

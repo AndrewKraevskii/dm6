@@ -23,17 +23,19 @@
     return nCr(n - 1, r - 1) + nCr(n - 1, r);
   }
 
-  function stirlingNumber(k: number, n: number): number {
-    if (n > k) return -1;
+  function stirlingNumber(r: number, n: number): number {
+    if (r < 0 || n < 0) return 0;
+
+    if (n > r) return -1;
 
     if (n == 0) return 0;
 
-    if (k == n) return 1;
+    if (r == n) return 1;
 
-    if (n == 1) return factorial(k - 1);
+    if (n == 1) return factorial(r - 1);
 
-    if (k - n == 1) return nCr(k, 2);
-    else return stirlingNumber(k - 1, n - 1) + (k - 1) * stirlingNumber(k - 1, n);
+    if (r - n == 1) return nCr(r, 2);
+    else return stirlingNumber(r - 1, n - 1) + (r - 1) * stirlingNumber(r - 1, n);
   }
 
   function sum(k: number, n: number) {

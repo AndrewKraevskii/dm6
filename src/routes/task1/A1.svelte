@@ -4,7 +4,7 @@
   import * as C from 'js-combinatorics';
   let n = 4;
   let k = 8;
-  $: a = C.combination(k, n)
+  $: a = C.combination(Math.max(k, 0), Math.max(n, 0));
 </script>
 
 <h4>≤ 1 ball per box—injective mapping.</h4>

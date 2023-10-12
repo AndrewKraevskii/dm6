@@ -9,5 +9,5 @@
 <ul>
   <li><a href="./task1">1</a></li>
   <li><a href="./task2">2</a></li>
-  <li><a href="./task3">3</a>TODO</li>
+  <li><a href="./task3">3</a></li>
 </ul>

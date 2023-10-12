@@ -1,28 +1,8 @@
 <script lang="ts">
   import Katex from '$components/Katex.svelte';
+  import { sample, shuffle } from '$lib/utils';
 
   function password_generator() {
-    function sample<T>(arr: T[], n: number, starting?: T[]): T[] {
-      const res: T[] = starting || [];
-      while (res.length < n) {
-        const rand = Math.floor(Math.random() * arr.length);
-        const element = arr[rand];
-
-        if (res.includes(element)) continue;
-
-        res.push(element);
-      }
-      return res;
-    }
-
-    function shuffle<T>(arr: T[]) {
-      for (let i = arr.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [arr[i], arr[j]] = [arr[j], arr[i]];
-      }
-      return arr;
-    }
-
     const lowerCase = 'abcdefghijklmnopqrstuvwxyz'.split('');
     const upperCase = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
     const numbers = '0123456789'.split('');
@@ -79,11 +59,16 @@
   />
 </p>
 <p>
-  <Katex math="51149739513600 \thickapprox 5*10^{"{13}"}" />
-  Если мы пытаемся подобрать пароль на сайте который принимает его примерно раз в 1 секунду (такое вполне может быть) это потребует примерно <a href="https://en.wikipedia.org/wiki/One_Million_Years_B.C.">1 миллион лет</a>
+  <Katex math="51149739513600 \thickapprox 5*10^{'{13}'}" />
+  Если мы пытаемся подобрать пароль на сайте который принимает его примерно раз в 1 секунду (такое вполне
+  может быть) это потребует примерно
+  <a href="https://en.wikipedia.org/wiki/One_Million_Years_B.C.">1 миллион лет</a>
 </p>
 <p>
-  Возможен также случай когда была взломана база данных и производится попытка подобрать пароль подходящий к хешам сохранённым в базе данных. 
+  Возможен также случай когда была взломана база данных и производится попытка подобрать пароль
+  подходящий к хешам сохранённым в базе данных.
 </p>
-Скорость алгоритмов хеширования будет примерно <a href="https://automationrhapsody.com/md5-sha-1-sha-256-sha-512-speed-performance/">1 миллион операций в секунду</a>. Тогда это потребует 1 год чтобы подобрать пароли под все хеши в базе данных.
-
+Скорость алгоритмов хеширования будет примерно<a
+  href="https://automationrhapsody.com/md5-sha-1-sha-256-sha-512-speed-performance/"
+  >1 миллион операций в секунду</a
+>. Тогда это потребует 1 год чтобы подобрать пароли под все хеши в базе данных.
